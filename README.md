@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-# Ingesoft-I
+## Ingesoft-I
 =======
 
->>>>>>> da01a91 (first commit)
