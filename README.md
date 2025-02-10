@@ -7,7 +7,7 @@ Víctor Camilo Cañón Castellanos - vcanonc@unal.edu.co
 Jacobo Álzate Corredor- jalzateco@unal.edu.co
 
 ## Nombre del proyecto
-Sistema de pruebas en línea
+Sistema de pruebas en línea - SISEXAM
 
 
 ## Descripción del objetivo del proyecto
