@@ -44,9 +44,9 @@ BASE_APPS = [
 ]
 
 LOCAL_APPS = [
-    'usuario.apps.UsuarioConfig',
     'academico.apps.AcademicoConfig',
     'evaluaciones.apps.EvaluacionesConfig',
+    'usuarios.apps.UsuariosConfig',
 ]
 
 THIRD_PARTY_APPS = [
@@ -147,3 +147,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+AUTH_USER_MODEL = 'usuarios.Usuario'
