@@ -59,3 +59,25 @@ class Respuesta(models.Model):
 
 
 # IMPLEMENTAR AQUÍ MODELO DE CALIFICACIONES
+
+
+class ExamenPregunta(models.Model):
+    id_examen = models.ForeignKey('Examen', on_delete=models.CASCADE)
+    id_pregunta = models.ForeignKey('Pregunta', on_delete=models.CASCADE)
+    
+    class Meta:
+        unique_together = ('id_examen', 'id_pregunta')
+    
+    def __str__(self):
+        return f"Pregunta {self.id_pregunta.id_pregunta} en {self.id_examen.titulo}"
+
+
+class ExamenGrupo(models.Model):
+    id_examen = models.ForeignKey('Examen', on_delete=models.CASCADE)
+    id_grupo = models.ForeignKey('academico.Grupo', on_delete=models.CASCADE)
+    
+    class Meta:
+        unique_together = ('id_examen', 'id_grupo')
+    
+    def __str__(self):
+        return f"{self.id_examen.titulo} - {self.id_grupo.nombre}"
