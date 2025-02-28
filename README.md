@@ -16,6 +16,6 @@ Este proyecto tiene como objetivo desarrollar una plataforma en línea para la g
 ## Tecnologías utilizadas
 - **Lenguajes de programación**: Python, JavaScript  
 - **Frameworks**: Django (Backend), Vue.js (Frontend)  
-- **Servicios externos**: PostgreSQL (Base de datos), Firebase (Autenticación), Docker (Contenedores)  
+
 
 
