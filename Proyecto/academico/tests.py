@@ -2,7 +2,7 @@ from django.test import TestCase
 from academico.models import Asignatura, Grado, Grupo
 
 
-#Test de Pablo Niño
+# Test de Pablo Niño
 class AsignaturaModelTest(TestCase):
     def test_crear_asignatura(self):
         asignatura = Asignatura.objects.create(nombre="Matemáticas")
@@ -10,7 +10,7 @@ class AsignaturaModelTest(TestCase):
         self.assertEqual(asignatura_recuperada.nombre, "Matemáticas")
 
 
-#test de Victor Cañon
+# Test de Victor Cañon
 class GradoModelTest(TestCase):
     def test_crear_grado(self):
         grado = Grado.objects.create(nombre="Primero")
@@ -18,7 +18,7 @@ class GradoModelTest(TestCase):
         self.assertEqual(grado_recuperado.nombre, "Primero")
 
 
-#Test de Jacobo Alzate
+# Test de Jacobo Alzate
 class GrupoModelTest(TestCase):
     def test_crear_grupo(self):
         grado = Grado.objects.create(nombre="Primero")  
@@ -28,7 +28,7 @@ class GrupoModelTest(TestCase):
         self.assertEqual(grupo_recuperado.id_grado, grado)  
 
 
-#Test de Jeisson Bareño
+# Test de Jeisson Bareño
 class AsignaturaStrTest(TestCase):
     def test_str_asignatura(self):
         asignatura = Asignatura.objects.create(nombre="Física")
