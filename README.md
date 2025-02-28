@@ -1,10 +1,10 @@
 # Repositorio grupal - Ingeniería de Software 1 - 2024-2 Grupo 12
 
 ## Integrantes del equipo
-Pablo Andrés Nino Barreto- pninob@unal.edu.co
-Jeisson Duván Bareño Ruiz- jbareno@unal.edu.co
-Víctor Camilo Cañón Castellanos - vcanonc@unal.edu.co
-Jacobo Álzate Corredor- jalzateco@unal.edu.co
+- Pablo Andrés Nino Barreto- pninob@unal.edu.co
+- Jeisson Duván Bareño Ruiz- jbareno@unal.edu.co
+- Víctor Camilo Cañón Castellanos - vcanonc@unal.edu.co
+- Jacobo Álzate Corredor- jalzateco@unal.edu.co
 
 ## Nombre del proyecto
 Sistema de pruebas en línea - SISEXAM
