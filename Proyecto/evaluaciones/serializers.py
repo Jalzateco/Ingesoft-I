@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Examen, ExamenGrupo, ExamenPregunta, Opcion, Pregunta, Respuesta
+from .models import Calificacion, Examen, ExamenGrupo, ExamenPregunta, Opcion, Pregunta, Respuesta
 from academico.models import Grupo
 
 
@@ -46,3 +46,12 @@ class RespuestaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Respuesta
         fields = '__all__'
+
+
+class CalificacionSerializer(serializers.ModelSerializer):
+    id_examen = serializers.SlugRelatedField(slug_field='titulo', read_only=True)
+    id_usuario = serializers.SlugRelatedField(slug_field='nombres', read_only=True)
+    
+    class Meta:
+        model = Calificacion
+        fields = ('id_calificacion', 'id_examen', 'id_usuario', 'nota', 'fecha_calificacion')
