@@ -1,5 +1,4 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import Login from '@/components/Login.vue'
 
 // Admin views
@@ -16,8 +15,6 @@ import DocenteCalificaciones from '@/views/docente/Calificaciones.vue'
 import EstudianteDashboard from '@/views/estudiante/Dashboard.vue'
 import EstudianteCursos from '@/views/estudiante/Cursos.vue'
 import EstudianteCalificaciones from '@/views/estudiante/Calificaciones.vue'
-
-Vue.use(VueRouter)
 
 const routes = [
   {
@@ -82,16 +79,15 @@ const routes = [
     component: EstudianteCalificaciones,
     meta: { requiresAuth: true, role: 'estudiante' }
   },
-  // Ruta por defecto (404)
+  // Ruta por defecto (404) - Actualizada para Vue Router 4
   {
-    path: '*',
+    path: '/:pathMatch(.*)*',
     redirect: '/'
   }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
