@@ -2,6 +2,12 @@ from django.db import models
 
 
 class Asignatura(models.Model):
+    
+    class Meta:
+        verbose_name_plural = "Asignaturas"
+        verbose_name = "Asignatura"
+        ordering = ["nombre"]
+    
     id_asignatura = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
     
@@ -10,6 +16,12 @@ class Asignatura(models.Model):
 
 
 class Grado(models.Model):
+    
+    class Meta:
+        verbose_name_plural = "Grados"
+        verbose_name = "Grado"
+        ordering = ["nombre"]
+    
     id_grado = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
     
@@ -18,8 +30,15 @@ class Grado(models.Model):
 
 
 class Grupo(models.Model):
+    
+    class Meta:
+        verbose_name_plural = "Grupos"
+        verbose_name = "Grupo"
+        ordering = ["nombre"]
+    
     id_grupo = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
+    
     id_grado = models.ForeignKey(Grado, on_delete=models.CASCADE, related_name='grado')
     asignaturas_asignadas = models.ManyToManyField('Asignatura', through='GrupoAsignatura')
     
