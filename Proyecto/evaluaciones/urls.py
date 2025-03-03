@@ -2,7 +2,7 @@ from django.urls import path
 from .views import (
     ExamenListView, ExamenDetailView, PreguntaListView, PreguntaDetailView,
     OpcionListView, OpcionDetailView, RespuestaListView, RespuestaDetailView,
-    CalificacionListView, CalificacionDetailView, CalificacionUpdateView, ExamenEstudianteListView
+    CalificacionListView, CalificacionDetailView, ExamenEstudianteListView
 )
 
 
@@ -20,5 +20,4 @@ urlpatterns = [
     path('respuestas/<int:pk>/', RespuestaDetailView.as_view(), name='detalle-respuesta'),
     path('calificaciones/', CalificacionListView.as_view(), name='lista-calificaciones'),  
     path('calificaciones/<int:pk>/', CalificacionDetailView.as_view(), name='detalle-calificacion'),
-    path('calificaciones/<int:pk>/actualizar/', CalificacionUpdateView.as_view(), name='actualizar-calificacion'),
 ]
