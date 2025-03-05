@@ -1,10 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-// Otros imports que puedas tener...
+import axios from 'axios'
 
 const app = createApp(App)
-app.use(router)
-// Otros plugins que puedas tener...
 
+axios.defaults.baseURL = 'http://localhost:8000'
+
+app.use(router)
 app.mount('#app')
