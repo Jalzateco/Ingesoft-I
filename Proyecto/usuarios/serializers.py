@@ -4,8 +4,6 @@ from academico.models import Asignatura, Grupo
 from .models import Docente, Estudiante, Usuario, DocenteAsignatura, DocenteGrupo
 
 
-
-
 class UsuarioSerializer(serializers.ModelSerializer):
     """
         Serializer para el modelo Usuario, incluyendo manejo de contraseña.

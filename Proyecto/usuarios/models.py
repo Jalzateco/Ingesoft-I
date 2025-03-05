@@ -6,7 +6,6 @@ class UsuarioManager(BaseUserManager):
     """
         Manager personalizado para manejar la creación de usuarios y superusuarios.
     """
-    
     def create_user(self, id_usuario, nombres, apellidos, email, clave, rol):
         if not id_usuario:
             raise ValueError("El usuario debe tener un ID único.")
